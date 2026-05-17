@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="icons/icon-256.png" alt="Logo" width="256" height="256">
+</p>
 # Image Tools
 
 A browser extension that adds image conversion, reverse search, and sharing options to the right-click context menu.
