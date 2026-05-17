@@ -40,7 +40,7 @@ This extension uses Manifest V3 and can be loaded into Chromium-based browsers:
 6. Right-click any image to view the new context menu options.
 
 ## Privacy Policy
-This extension does not track users or collect data. All image conversions happen locally on the device. Read the (Privancy policy,PRIVACY_POLICY.md) file for more information.
+This extension does not track users or collect data. All image conversions happen locally on the device. Read PRIVACY_POLICY.md for more information.
 
 ## License
 MIT License.
