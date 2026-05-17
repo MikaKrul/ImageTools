@@ -39,4 +39,4 @@ This extension uses Manifest V3 and can be loaded into Chromium-based browsers:
 This extension does not track users or collect data. All image conversions happen locally on the device. Read the (Privancy policy,PRIVACY_POLICY.md) file for more information.
 
 ## License
-MIT License. (LICENCE, LICENCE)
+MIT License.
