@@ -224,9 +224,9 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
                 document.execCommand("copy");
                 document.body.removeChild(ta);
               }
-              // Optionele visuele feedback via kleine banner in pagina
+              // Optional visual feedback via small banner in page
               const div = document.createElement('div');
-              div.innerText = 'Base64 gekopieerd!';
+              div.innerText = 'Base64 copied!';
               div.style = 'position:fixed;top:20px;right:20px;background:#25D366;color:#fff;padding:10px 15px;border-radius:4px;z-index:999999;font-family:sans-serif;font-size:14px;box-shadow:0 2px 10px rgba(0,0,0,0.2)';
               document.body.appendChild(div);
               setTimeout(() => div.remove(), 2000);
