@@ -8,7 +8,7 @@ const icons = {
   
   // Official Search Logos
   google: '<svg width="18" height="18" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><circle cx="154.752" cy="154.667" r="19.556" fill="#34a853"/><circle cx="96.086" cy="105.778" r="29.333" fill="#4285f4"/><path fill="#ea4335" d="M8,143.911C8,166.046,25.954,184,48.089,184H96v-19.556l-49.011-0.122 c-10.756,0-19.433-10.01-19.433-21.878v-22H8V143.911z"/><path fill="#fbbc05" d="M184,67.644c0-22.134-17.954-40.089-40.089-40.089h-23.467l24.444,19.556 c10.756,0,19.556,10.132,19.556,22v36.667H184V67.644z"/><path fill="#4285f4" d="M115.556,8H76.444L61.778,27.556H48.089C25.954,27.556,8,45.51,8,67.644v23.467h19.556v-22 c0-11.868,8.8-22,19.556-22h97.778L115.556,8z"/></svg>',
-  lenso: '<img src="https://lenso.ai/apple-touch-icon.png" width="18" height="18" style="border-radius: 4px;" alt="Lenso">',
+  lenso: '<svg width="18" height="18" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><defs><filter id="a_lenso_popup" width="176" height="156.218" x="8" y="17.891" filterUnits="userSpaceOnUse"><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask id="b_lenso_popup" width="176" height="156.218" x="8" y="17.891" maskUnits="userSpaceOnUse"><path fill="#fff" d="M184.098,17.613H7.932v156.596h176.166V17.61V17.613z" filter="url(#a_lenso_popup)"/></mask><g mask="url(#b_lenso_popup)"><path fill="#140ea8" d="M79.752,26.642c4.791-8.367,15.409-11.236,23.71-6.404s11.146,15.534,6.35,23.901L40.39,165.36 c-4.791,8.367-15.406,11.234-23.71,6.402c-8.299-4.832-11.146-15.534-6.35-23.901L79.752,26.642z"/><path fill="#a1a6f3" d="M142.178,77.943c-3.221-5.656-9.238-9.138-15.747-9.113c-6.505-0.021-12.517,3.461-15.736,9.113 l-39.4,68.792c-4.99,8.716-2.028,19.859,6.617,24.893c8.645,5.031,19.701,2.044,24.691-6.672 c3.026-5.307,8.662-8.587,14.771-8.596h18.121c6.109,0.009,11.745,3.289,14.771,8.596c4.993,8.716,16.047,11.702,24.691,6.672 c8.647-5.034,11.61-16.177,6.617-24.893L142.18,77.943H142.178z"/><path fill="#5a66e9" d="M110.757,77.834c4.99-8.716,16.047-11.7,24.691-6.669c8.645,5.031,11.61,16.177,6.617,24.893 l-39.462,68.898c-4.99,8.716-16.047,11.702-24.691,6.672c-8.645-5.034-11.61-16.177-6.617-24.893 C71.295,146.735,110.757,77.834,110.757,77.834z"/></g></svg>',
   bing: '<svg width="18" height="18" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><linearGradient id="a_bing" gradientUnits="userSpaceOnUse" x1="55.7284" y1="155.5388" x2="70.7399" y2="146.8719" gradientTransform="matrix(5.5556 0 0 -5.5556 -210 958.6666)"><stop offset="0" stop-color="#37BDFF"/><stop offset="0.1832" stop-color="#33BFFD"/><stop offset="0.3576" stop-color="#28C5F5"/><stop offset="0.528" stop-color="#15D0E9"/><stop offset="0.5468" stop-color="#12D1E7"/><stop offset="0.5903" stop-color="#1CD2E5"/><stop offset="0.7679" stop-color="#42D8DC"/><stop offset="0.9107" stop-color="#59DBD6"/><stop offset="1" stop-color="#62DCD4"/></linearGradient><path d="M155.963,120.988c0,1.745-0.095,3.483-0.282,5.196 c-1.129,10.435-5.647,19.877-12.448,27.177c0.854-0.953,1.628-1.973,2.306-3.069c0.521-0.832,0.986-1.698,1.379-2.603 c0.143-0.297,0.271-0.605,0.378-0.913c0.132-0.297,0.238-0.609,0.334-0.917c0.106-0.282,0.202-0.583,0.286-0.88 c0.081-0.308,0.165-0.616,0.235-0.924c0.015-0.037,0.026-0.073,0.037-0.11c0.073-0.308,0.128-0.616,0.191-0.924 c0.059-0.323,0.121-0.645,0.165-0.964c0-0.011,0-0.011,0-0.022c0.048-0.297,0.084-0.594,0.11-0.906 c0.07-0.7,0.106-1.401,0.106-2.116c0-4.015-1.107-7.788-3.043-10.996c-0.44-0.748-0.928-1.459-1.463-2.138 c-0.627-0.81-1.305-1.569-2.042-2.27c-1.83-1.771-3.971-3.223-6.336-4.246c-1.023-0.451-2.09-0.818-3.186-1.093 c-0.011,0-0.033-0.015-0.048-0.015l-0.378-0.128l-5.54-1.903v-0.011l-14.491-4.983c-0.048-0.011-0.106-0.011-0.143-0.022 l-0.906-0.334c-2.911-1.14-5.324-3.278-6.835-6.002L99.06,91.38l-6.065-15.455l-1.166-2.985l-0.297-0.609 c-0.33-0.807-0.513-1.687-0.513-2.603c0-0.235,0-0.473,0.026-0.689c0.345-3.399,3.234-6.065,6.728-6.065 c0.928,0,1.819,0.191,2.629,0.535l27.005,13.849l5.324,2.721c2.82,1.679,5.445,3.652,7.847,5.874 c8.701,7.99,14.41,19.188,15.264,31.709C155.915,118.766,155.963,119.87,155.963,120.988L155.963,120.988z" fill="url(#a_bing)"/><linearGradient id="b_bing" gradientUnits="userSpaceOnUse" x1="46.4623" y1="145.3685" x2="68.3095" y2="145.3685" gradientTransform="matrix(5.5556 0 0 -5.5556 -210 958.6666)"><stop offset="0" stop-color="#39D2FF"/><stop offset="0.1501" stop-color="#38CEFE"/><stop offset="0.2931" stop-color="#35C3FA"/><stop offset="0.4327" stop-color="#2FB0F3"/><stop offset="0.5468" stop-color="#299AEB"/><stop offset="0.5827" stop-color="#2692EC"/><stop offset="0.7635" stop-color="#1A6CF1"/><stop offset="0.909" stop-color="#1355F4"/><stop offset="1" stop-color="#104CF5"/></linearGradient><path d="M148.747,139.014c0,1.379-0.128,2.71-0.37,4.008c-0.07,0.345-0.139,0.689-0.224,1.034 c-0.154,0.616-0.319,1.21-0.521,1.804c-0.11,0.312-0.216,0.62-0.334,0.917c-0.121,0.308-0.249,0.605-0.378,0.913 c-0.396,0.906-0.858,1.771-1.382,2.603c-0.675,1.096-1.452,2.116-2.306,3.069c-3.934,4.352-17.299,12.111-22.224,15.264 l-10.93,6.681c-8.012,4.939-15.587,8.43-25.135,8.668c-0.451,0.015-0.891,0.026-1.331,0.026c-0.616,0-1.225-0.011-1.83-0.033c-16.17-0.62-30.268-9.299-38.401-22.125c-3.718-5.863-6.182-12.591-7.014-19.818c1.749,9.878,10.358,17.369,20.735,17.369c3.641,0,7.051-0.917,10.036-2.534c0.022-0.015,0.048-0.026,0.073-0.037l1.067-0.642l4.352-2.567l5.54-3.282v-0.154l0.715-0.429l49.566-29.363l3.813-2.259l0.381,0.128c0.011,0,0.033,0.015,0.048,0.015c1.093,0.271,2.163,0.642,3.183,1.093c2.369,1.023,4.506,2.475,6.336,4.246c0.737,0.7,1.415,1.463,2.046,2.27c0.535,0.678,1.023,1.393,1.459,2.138 C147.639,131.226,148.747,134.995,148.747,139.014L148.747,139.014z" fill="url(#b_bing)"/><linearGradient id="c_bing" gradientUnits="userSpaceOnUse" x1="48.08" y1="139.8044" x2="48.08" y2="169.0177" gradientTransform="matrix(5.5556 0 0 -5.5556 -210 958.6666)"><stop offset="0" stop-color="#1B48EF"/><stop offset="0.1221" stop-color="#1C51F0"/><stop offset="0.3212" stop-color="#1E69F5"/><stop offset="0.5676" stop-color="#2190FB"/><stop offset="1" stop-color="#26B8F4"/></linearGradient><path d="M78.185,41.015l-0.018,109.314l-5.54,3.282l-4.356,2.567l-1.071,0.649 c-0.018,0-0.048,0.018-0.066,0.033c-2.988,1.61-6.398,2.534-10.039,2.534c-10.38,0-18.975-7.487-20.731-17.369 c-0.084-0.455-0.147-0.924-0.198-1.379c-0.062-0.865-0.11-1.709-0.128-2.57V15.051c0-3.883,3.153-7.051,7.051-7.051 c1.459,0,2.827,0.455,3.949,1.203l21.556,14.084c0.117,0.099,0.242,0.183,0.378,0.26C74.544,27.353,78.185,33.751,78.185,41.015 L78.185,41.015z" fill="url(#c_bing)"/><linearGradient id="d_bing" gradientUnits="userSpaceOnUse" x1="47.5642" y1="139.5736" x2="61.0465" y2="153.0558" gradientTransform="matrix(5.5556 0 0 -5.5556 -210 958.6666)"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.3726" stop-color="#FDFDFD"/><stop offset="0.5069" stop-color="#F6F6F6"/><stop offset="0.6026" stop-color="#EBEBEB"/><stop offset="0.68" stop-color="#DADADA"/><stop offset="0.7463" stop-color="#C4C4C4"/><stop offset="0.805" stop-color="#A8A8A8"/><stop offset="0.8581" stop-color="#888888"/><stop offset="0.9069" stop-color="#626262"/><stop offset="0.9523" stop-color="#373737"/><stop offset="0.9926" stop-color="#090909"/><stop offset="1" stop-color="#000000"/></linearGradient><path d="M148.747,139.014c0,1.379-0.128,2.71-0.37,4.008 c-0.07,0.345-0.139,0.689-0.224,1.034c-0.154,0.616-0.319,1.21-0.521,1.804c-0.11,0.312-0.216,0.62-0.334,0.917 c-0.121,0.308-0.249,0.605-0.378,0.913c-0.396,0.906-0.858,1.771-1.382,2.603c-0.675,1.096-1.448,2.116-2.306,3.069 c-3.934,4.352-17.299,12.111-22.224,15.264l-10.93,6.681c-8.012,4.939-15.587,8.43-25.135,8.668 c-0.451,0.015-0.891,0.026-1.331,0.026c-0.616,0-1.225-0.011-1.83-0.033c-16.17-0.62-30.268-9.299-38.401-22.125 c-3.718-5.863-6.182-12.591-7.014-19.818c1.749,9.878,10.358,17.369,20.735,17.369c3.641,0,7.051-0.917,10.036-2.534 c0.022-0.015,0.048-0.026,0.073-0.037l1.067-0.642l4.352-2.567l5.54-3.282v-0.154l0.715-0.429l49.566-29.363l3.813-2.259 l0.381,0.128c0.011,0,0.033,0.015,0.048,0.015c1.093,0.271,2.163,0.642,3.183,1.093c2.369,1.023,4.506,2.475,6.336,4.246 c0.737,0.7,1.415,1.463,2.046,2.27c0.535,0.678,1.023,1.393,1.459,2.138C147.639,131.226,148.747,134.995,148.747,139.014 L148.747,139.014z" fill="url(#d_bing)" fill-opacity="0.15"/><linearGradient id="e_bing" gradientUnits="userSpaceOnUse" x1="48.08" y1="169.536" x2="48.08" y2="140.1051" gradientTransform="matrix(5.5556 0 0 -5.5556 -210 958.6666)"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.3726" stop-color="#FDFDFD"/><stop offset="0.5069" stop-color="#F6F6F6"/><stop offset="0.6026" stop-color="#EBEBEB"/><stop offset="0.68" stop-color="#DADADA"/><stop offset="0.7463" stop-color="#C4C4C4"/><stop offset="0.805" stop-color="#A8A8A8"/><stop offset="0.8581" stop-color="#888888"/><stop offset="0.9069" stop-color="#626262"/><stop offset="0.9523" stop-color="#373737"/><stop offset="0.9926" stop-color="#090909"/><stop offset="1" stop-color="#000000"/></linearGradient><path d="M78.185,41.015l-0.018,109.314l-5.54,3.282l-4.356,2.567l-1.071,0.649 c-0.018,0-0.048,0.018-0.066,0.033c-2.988,1.61-6.398,2.534-10.039,2.534c-10.38,0-18.975-7.487-20.731-17.369 c-0.084-0.455-0.147-0.924-0.198-1.379c-0.062-0.865-0.11-1.709-0.128-2.57V15.051c0-3.883,3.153-7.051,7.051-7.051 c1.459,0,2.827,0.455,3.949,1.203l21.556,14.084c0.117,0.099,0.242,0.183,0.378,0.26C74.544,27.353,78.185,33.751,78.185,41.015 L78.185,41.015z" fill="url(#e_bing)" fill-opacity="0.1"/></svg>',
   yandex: '<svg width="18" height="18" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><path d="M8,96C8,47.399,47.399,8,96,8s88,39.399,88,88s-39.399,88-88,88S8,144.601,8,96z" fill="#fc3f1d"/><path d="M98.486,106.01c5.357,11.734,7.142,15.813,7.142,29.906V154.6H86.499v-31.498L50.405,44.603h19.96 L98.486,106.01z M122.081,44.602L98.678,97.785h19.448L141.595,44.6h-19.514L122.081,44.602z" fill="#fff"/></svg>',
   baidu: '<svg width="18" height="18" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><g transform="translate(121.212121, 90.909091)" fill="#3388FF"><path d="M-46.082-28.519c10.601,0,19.167-12.163,19.167-27.203 c0-15.027-8.566-27.187-19.167-27.187c-10.588,0-19.177,12.16-19.177,27.187C-65.259-40.682-56.67-28.519-46.082-28.519"/><path d="M-0.426-26.72c14.175,1.831,23.286-13.244,25.097-24.67 c1.847-11.406-7.297-24.666-17.327-26.944c-10.056-2.297-22.608,13.755-23.75,24.223 C-17.772-41.317-14.566-28.539-0.426-26.72"/><path d="M-81.714,9.834c19.193-4.113,16.583-26.98,16.009-31.983 c-0.945-7.708-10.036-21.172-22.384-20.11c-15.535,1.388-17.804,23.76-17.804,23.76 C-107.996-8.154-100.865,13.946-81.714,9.834"/><path d="M55.749-7.536c0-5.462-4.551-21.926-21.446-21.926 c-16.927,0-19.187,15.535-19.187,26.517c0,10.484,0.886,25.116,21.907,24.65C58.051,21.246,55.749-2.039,55.749-7.536"/><path d="M-61.332,49.611c-0.562,1.608-1.818,5.721-0.734,9.303 c2.149,8.031,9.147,8.394,9.147,8.394h10.049V42.81h-10.767C-58.472,44.25-60.809,48-61.332,49.611"/><path d="M15.1,76.986h-28.713c-11.124-2.86-11.653-10.74-11.653-10.74V34.588 l11.653-0.188v28.456c0.711,3.029,4.492,3.579,4.492,3.579H2.713V34.588H15.1V76.986z M-31.375,77.158h-24.948 c-10.776-2.139-15.068-9.474-15.613-10.723c-0.536-1.268-3.583-7.161-1.967-17.182c4.658-15.024,17.94-16.105,17.94-16.105 h13.282V16.875l11.306,0.171V77.158z M34.302,40.448c0,0-21.926-16.91-34.728-35.186 C-17.772-21.686-42.421-10.72-50.663,2.983c-8.206,13.704-20.998,22.372-22.822,24.666 c-1.837,2.262-26.477,15.519-21.008,39.742c5.469,24.21,24.679,23.741,24.679,23.741s14.159,1.391,30.589-2.275 c16.424-3.631,30.577,0.906,30.577,0.906s38.38,12.814,48.877-11.856C50.723,53.242,34.302,40.448,34.302,40.448 L34.302,40.448z"/></g></svg>',
@@ -27,36 +27,36 @@ const icons = {
 };
 
 const FORMATS = [
-  { id: 'png', title: 'PNG', cat: 'format' },
-  { id: 'jpeg', title: 'JPEG', cat: 'format' },
-  { id: 'pdf', title: 'PDF', cat: 'format' },
-  { id: 'avif', title: 'AVIF', cat: 'format' },
-  { id: 'bmp', title: 'BMP', cat: 'format' },
-  { id: 'gif', title: 'GIF', cat: 'format' },
-  { id: 'tiff', title: 'TIFF', cat: 'format' },
-  { id: 'ico', title: 'ICO', cat: 'format' },
-  { id: 'webp', title: 'WebP', cat: 'format' }
+  { id: 'png', title: 'Save as PNG', cat: 'format' },
+  { id: 'jpeg', title: 'Save as JPEG', cat: 'format' },
+  { id: 'pdf', title: 'Save as PDF', cat: 'format' },
+  { id: 'avif', title: 'Save as AVIF', cat: 'format' },
+  { id: 'bmp', title: 'Save as BMP', cat: 'format' },
+  { id: 'gif', title: 'Save as GIF', cat: 'format' },
+  { id: 'tiff', title: 'Save as TIFF', cat: 'format' },
+  { id: 'ico', title: 'Save as ICO', cat: 'format' },
+  { id: 'webp', title: 'Save as WebP', cat: 'format' }
 ];
 
 const SEARCH = [
   { id: 'searchGoogle', title: 'Google Lens', icon: 'google', cat: 'search' },
   { id: 'searchLenso', title: 'Lenso.ai', icon: 'lenso', cat: 'search' },
-  { id: 'searchBing', title: 'Bing Visual', icon: 'bing', cat: 'search' },
-  { id: 'searchTinEye', title: 'TinEye', icon: 'tineye', cat: 'search' },
-  { id: 'searchYandex', title: 'Yandex', icon: 'yandex', cat: 'search' },
-  { id: 'searchBaidu', title: 'Baidu', icon: 'baidu', cat: 'search' },
-  { id: 'searchSogou', title: 'Sogou', icon: 'sogou', cat: 'search' },
-  { id: 'searchShutterstock', title: 'Shutterstock', icon: 'shutterstock', cat: 'search' }
+  { id: 'searchBing', title: 'Bing Visual Search', icon: 'bing', cat: 'search' },
+  { id: 'searchYandex', title: 'Yandex Images', icon: 'yandex', cat: 'search' },
+  { id: 'searchBaidu', title: 'Baidu Image', icon: 'baidu', cat: 'search' },
+  { id: 'searchSogou', title: 'Sogou Search', icon: 'sogou', cat: 'search' },
+  { id: 'searchTinEye', title: 'TinEye Reverse Search', icon: 'tineye', cat: 'search' },
+  { id: 'searchShutterstock', title: 'Shutterstock Search', icon: 'shutterstock', cat: 'search' }
 ];
 
 const SHARES = [
-  { id: 'shareWhatsApp', title: 'WhatsApp', icon: 'whatsapp', cat: 'share' },
-  { id: 'shareTwitter', title: 'X (Twitter)', icon: 'twitter', cat: 'share' },
+  { id: 'shareWhatsApp', title: 'Share via WhatsApp', icon: 'whatsapp', cat: 'share' },
+  { id: 'shareTwitter', title: 'Share on X (Twitter)', icon: 'twitter', cat: 'share' },
   { id: 'shareNative', title: 'Windows Share', icon: 'share', cat: 'share' },
-  { id: 'shareTelegram', title: 'Telegram', icon: 'telegram', cat: 'share' },
-  { id: 'shareReddit', title: 'Reddit', icon: 'reddit', cat: 'share' },
-  { id: 'shareSignal', title: 'Signal', icon: 'signal', cat: 'share' },
-  { id: 'shareFacebook', title: 'Facebook', icon: 'facebook', cat: 'share' },
+  { id: 'shareTelegram', title: 'Share on Telegram', icon: 'telegram', cat: 'share' },
+  { id: 'shareReddit', title: 'Share on Reddit', icon: 'reddit', cat: 'share' },
+  { id: 'shareSignal', title: 'Share on Signal', icon: 'signal', cat: 'share' },
+  { id: 'shareFacebook', title: 'Share on Facebook', icon: 'facebook', cat: 'share' },
   { id: 'shareBase64', title: 'Copy as Base64', icon: 'share', cat: 'share' }
 ];
 
@@ -112,12 +112,12 @@ function setupList(items, listId, prefs, showCount = 4) {
   if (extraDiv) {
     const btn = document.createElement('div');
     btn.className = 'dropdown-btn';
-    btn.innerHTML = `<span>Meer opties</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s;"><path d="m6 9 6 6 6-6"/></svg>`;
+    btn.innerHTML = `<span>More options</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s;"><path d="m6 9 6 6 6-6"/></svg>`;
     
     btn.onclick = () => {
       const isShowing = extraDiv.classList.contains('show');
       extraDiv.classList.toggle('show');
-      btn.querySelector('span').textContent = isShowing ? 'Meer opties' : 'Minder opties';
+      btn.querySelector('span').textContent = isShowing ? 'More options' : 'Fewer options';
       btn.querySelector('svg').style.transform = isShowing ? '' : 'rotate(180deg)';
     };
     list.appendChild(btn);

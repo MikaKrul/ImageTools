@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Save Image As</title>
+  <title>Welcome to Image Tools</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -66,25 +66,45 @@
       font-size: 0.9rem;
     }
 
-    .moon-icon {
+    .theme-toggle {
       position: fixed;
       top: 24px;
       right: 24px;
+      display: inline-block;
       width: 44px;
-      height: 44px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text);
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
+      height: 24px;
     }
 
-    .moon-icon:hover { transform: scale(1.05); }
+    .theme-toggle input { opacity: 0; width: 0; height: 0; }
+
+    .slider-toggle {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--border);
+      transition: .4s;
+      border-radius: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+    }
+
+    .slider-toggle:before {
+      position: absolute;
+      content: "";
+      height: 18px; width: 18px;
+      left: 3px; bottom: 2px;
+      background-color: var(--text);
+      transition: .4s;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    input:checked + .slider-toggle { background-color: var(--primary); border-color: var(--primary); }
+    input:checked + .slider-toggle:before { transform: translateX(20px); background-color: white; }
 
     .container {
       width: 95%;
@@ -242,16 +262,22 @@
     Image Tools
   </div>
 
-  <div class="moon-icon" id="theme-toggle">
-    <svg id="moon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-  </div>
+  <label class="theme-toggle" title="Toggle Dark/Light Mode">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider-toggle">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="margin-left: 20px; z-index: 1;">
+        <circle cx="12" cy="12" r="4"/><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707"/>
+      </svg>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" style="position: absolute; left: 6px; z-index: 1;">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </span>
+  </label>
 
   <div class="container">
     <div class="setup-columns">
       <div>
-        <div class="section-title">Image Formats</div>
+        <div class="section-title">Save Image As</div>
         <div class="setup-list" id="formats-grid"></div>
       </div>
       <div>
@@ -259,13 +285,16 @@
         <div class="setup-list" id="search-grid"></div>
       </div>
       <div>
-        <div class="section-title">Share Options</div>
+        <div class="section-title">Social Sharing</div>
         <div class="setup-list" id="shares-grid"></div>
       </div>
     </div>
 
     <div class="footer-actions">
       <button class="btn" id="finish-btn">Get Started</button>
+    </div>
+    <div style="text-align: center; margin-top: 40px; color: var(--text-dim); font-size: 0.9rem;">
+      &copy; Image Tools (v1.1.0)
     </div>
   </div>
 
