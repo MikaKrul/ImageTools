@@ -41,10 +41,14 @@ const SEARCH_TOOLS = [
 const ALL_ACTIONS = [...IMAGE_TYPES, ...SEARCH_TOOLS, ...SOCIAL_CHANNELS];
 
 let _menuLock = false;
+let _pendingSync = false;
 let _cachedPrefs = null;
 
 async function syncContextActions() {
-  if (_menuLock) return;
+  if (_menuLock) {
+    _pendingSync = true;
+    return;
+  }
   _menuLock = true;
 
   try {
@@ -105,6 +109,10 @@ async function syncContextActions() {
 
   } finally {
     _menuLock = false;
+    if (_pendingSync) {
+      _pendingSync = false;
+      syncContextActions();
+    }
   }
 }
 
@@ -130,7 +138,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     } else if (action.key === 'shareNative') {
       try {
         await chrome.scripting.executeScript({
-          target: { tabId: tab.id },
+          target: { tabId: tab.id, frameIds: [info.frameId] },
           func: async (url) => {
             if (navigator.share) {
               try {
@@ -166,23 +174,31 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     const prefs = _cachedPrefs || await chrome.storage.sync.get({ quality: 92, prefix: '', subfolder: '' });
     
     const rawData = await chrome.scripting.executeScript({
-      target: { tabId: tab.id },
+      target: { tabId: tab.id, frameIds: [info.frameId] },
       args: [info.srcUrl],
       func: (u) => new Promise(r => {
+        if (u.startsWith('data:')) return r(u);
         const i = new Image();
         i.crossOrigin = "anonymous";
-        i.onload = () => {
-          const c = document.createElement("canvas");
-          c.width = i.naturalWidth; c.height = i.naturalHeight;
-          const x = c.getContext("2d");
-          x.drawImage(i, 0, 0);
-          r(c.toDataURL("image/png"));
+        const fallback = () => {
+          fetch(u).then(res => res.blob()).then(b => {
+            const f = new FileReader();
+            f.onloadend = () => r(f.result);
+            f.readAsDataURL(b);
+          }).catch(() => r(null));
         };
-        i.onerror = () => fetch(u).then(res => res.blob()).then(b => {
-          const f = new FileReader();
-          f.onloadend = () => r(f.result);
-          f.readAsDataURL(b);
-        }).catch(() => r(null));
+        i.onload = () => {
+          try {
+            const c = document.createElement("canvas");
+            c.width = i.naturalWidth; c.height = i.naturalHeight;
+            const x = c.getContext("2d");
+            x.drawImage(i, 0, 0);
+            r(c.toDataURL("image/png"));
+          } catch (e) {
+            fallback();
+          }
+        };
+        i.onerror = fallback;
         i.src = u;
       })
     });
@@ -193,7 +209,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (action.key === "shareBase64") {
       try {
         await chrome.scripting.executeScript({
-          target: { tabId: tab.id },
+          target: { tabId: tab.id, frameIds: [info.frameId] },
           func: async (b64) => {
             try {
               // Try clipboard API first
@@ -300,7 +316,12 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
         if (s) name = s.replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9_\-]/g, "_") || "image";
       } catch {}
       
-      let finalName = (prefs.prefix || "") + name + action.suffix;
+      let actualSuffix = action.suffix;
+      if (exported.type === "image/png" && action.suffix !== ".png" && action.cat === "format") {
+        actualSuffix = ".png";
+      }
+
+      let finalName = (prefs.prefix || "") + name + actualSuffix;
       if (prefs.subfolder) {
         finalName = prefs.subfolder.replace(/\/$/, "") + "/" + finalName;
       }
