@@ -39,6 +39,15 @@ This extension uses Manifest V3 and can be loaded into Chromium-based browsers:
 5. Select the folder containing the manifest.json file.
 6. Right-click any image to view the new context menu options.
 
+### Firefox (Developer Mode)
+
+1. Clone or download this repository.
+2. In the root folder, rename `manifest.firefox.json` to `manifest.json` (replacing the existing one).
+3. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
+4. Click on **Load Temporary Add-on...**.
+5. Select any file in the folder (e.g., `manifest.json`).
+6. Right-click any image to view the new context menu options.
+
 ## Privacy Policy
 This extension does not track users or collect data. All image conversions happen locally on the device. Read PRIVACY_POLICY.md for more information.
 
