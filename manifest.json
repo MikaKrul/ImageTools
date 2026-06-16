@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Image Tools",
-  "version": "1.1.0",
+  "version": "1.2",
   "description": "Right-click any image to convert and save it as a different format.",
   "permissions": ["contextMenus", "downloads", "activeTab", "scripting", "storage"],
   "action": {
